@@ -6,7 +6,7 @@ import { PrivateRoutes } from "./routes/PrivateRoutes";
 import { AuthProvider } from "./context/AuthContext";
 import { darkTheme } from "./theme/dark";
 import { lightTheme } from "./theme/light";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { Layout } from "./layout/layout";
 import { ProductsScreen } from "./screens/app/ProductsScreen/ProductsScreen ";
