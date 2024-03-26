@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #f44336; /* Cor da marca */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.linkj-login {
+  text-decoration: none;
+  color: #f44336; /* Cor do link */
+}
+
+button[type="submit"]:hover {
+  background-color: #d32f2f; /* Cor da marca em hover */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-danger {
+  color: #f44336; /* Cor de erro */
+}
+
+.text-primary {
+  color: #f44336; /* Cor do link */
+}

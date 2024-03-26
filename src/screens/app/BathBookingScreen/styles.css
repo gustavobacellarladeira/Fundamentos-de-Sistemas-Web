@@ -1,0 +1,93 @@
+.bath-booking-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #f44336;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d32f2f;
+}
+
+.error-message {
+  color: #f44336;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.bath-list {
+  flex: 1;
+  padding: 20px;
+}
+
+.bath-list h2 {
+  margin-bottom: 20px;
+}
+
+.bath-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bath-list li {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bath-list li div {
+  margin-bottom: 5px;
+}
+
+.bath-list li div strong {
+  margin-right: 5px;
+}
+
+.options {
+  display: flex;
+}
+
+.options span {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.options span:hover {
+  color: #f44336;
+}

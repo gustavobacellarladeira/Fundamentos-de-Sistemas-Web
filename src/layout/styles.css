@@ -1,0 +1,16 @@
+.top-navbar-mobile-only {
+  display: none;
+}
+
+.left-side-navbar-web-only {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .top-navbar-mobile-only {
+    display: block;
+  }
+  .left-side-navbar-web-only {
+    display: none;
+  }
+}
