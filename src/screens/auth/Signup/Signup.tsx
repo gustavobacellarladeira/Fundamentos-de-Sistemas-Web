@@ -25,7 +25,17 @@ export const Signup = () => {
 
   const handleSubmit = async (values, { setSubmitting, setFieldError }) => {
     try {
-      await signup(values.email, values.password);
+      // verifica se as senhas são iguais
+
+      if (values.password !== values.passwordConfirm) {
+        setFieldError("passwordConfirm", "As senhas não coincidem");
+        return;
+      }
+
+      await signup({
+        email: values.email,
+        password: values.password,
+      });
     } catch (error) {
       window.alert("Falha ao criar uma conta. Por favor, tente novamente.");
     }

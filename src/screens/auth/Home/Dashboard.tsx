@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./styles.css";
 
-export const Dashboard = () => {
+export const Home = () => {
   return (
     <div className="products-screen">
       <div className="product-layout">
@@ -14,17 +14,17 @@ export const Dashboard = () => {
         <div className="product-options">
           <h2>Escolha uma opção</h2>
           <div className="product-cards">
-            <Link to="/services" className="product-card">
+            <Link to="/signup" className="product-card">
               <div className="card-content">
-                <h3>Serviços</h3>
-                <p>Nossos serviços disponíveis...</p>
+                <h3>Cadastrar Úsuario</h3>
+                <p>Cadastre e tenha acesso a todos os serviços...</p>
               </div>
             </Link>
 
-            <Link to="/pets" className="product-card">
+            <Link to="/login" className="product-card">
               <div className="card-content">
-                <h3>Cadastrar Pet</h3>
-                <p>Cadastre seu pet para agendar serviços...</p>
+                <h3>Entrar como Úsuario</h3>
+                <p>Entre e tenha acesso a todos os serviços...</p>
               </div>
             </Link>
           </div>

@@ -16,6 +16,7 @@ import { PetRegistrationScreen } from "./screens/app/PetRegistrationScreen/PetRe
 import { VaccineBookingScreen } from "./screens/app/VaccineBookingScreen/VaccineBookingScreen";
 import { TosaBookingScreen } from "./screens/app/TosaBookingScreen/TosaBookingScreen";
 import { AvaliationBookingScreen } from "./screens/app/AvaliationBookingScreen/AvaliationBookingScreen";
+import { Home } from "./screens/auth/Home/Dashboard";
 
 interface ThemeContextProps {
   setTheme: React.Dispatch<React.SetStateAction<string>>;
@@ -37,7 +38,7 @@ function App() {
               <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
-                {/* <Route path="/" element={<Home />} /> */}
+                <Route path="/" element={<Home />} />
 
                 <Route
                   path="/"

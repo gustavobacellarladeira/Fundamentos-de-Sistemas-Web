@@ -19,7 +19,10 @@ export const Login = () => {
 
   const handleSubmit = async (values, { setSubmitting, setFieldError }) => {
     try {
-      await login(values.email, values.password);
+      await login({
+        email: values.email,
+        password: values.password,
+      });
     } catch (error) {
       window.alert(
         "Ocorreu um erro durante o login. Por favor, tente novamente."
