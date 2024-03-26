@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./styles.css";
 
 export const Login = () => {
-  const { login, loading } = useAuth();
+  const { login } = useAuth();
 
   const initialValues = {
     email: "",
@@ -17,6 +17,8 @@ export const Login = () => {
     password: Yup.string().required("Senha é obrigatória"),
   });
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
   const handleSubmit = async (values, { setSubmitting, setFieldError }) => {
     try {
       await login({

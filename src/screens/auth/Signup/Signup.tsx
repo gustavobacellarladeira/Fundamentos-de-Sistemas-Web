@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./styles.css";
 
 export const Signup = () => {
-  const { signup, loading } = useAuth();
+  const { signup } = useAuth();
 
   const initialValues = {
     email: "",
@@ -18,11 +18,12 @@ export const Signup = () => {
     password: Yup.string()
       .min(6, "A senha deve ter no mínimo 6 caracteres")
       .required("Senha é obrigatória"),
-    passwordConfirm: Yup.string()
-      .oneOf([Yup.ref("password"), null], "As senhas devem coincidir")
-      .required("Confirme sua senha"),
+
+    passwordConfirm: Yup.string().nullable().required("Confirme sua senha"),
   });
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
   const handleSubmit = async (values, { setSubmitting, setFieldError }) => {
     try {
       // verifica se as senhas são iguais
