@@ -116,7 +116,7 @@ export const Signup = () => {
             </div>
             <div className="w-100 text-center mt-2">
               Já tem uma conta?{" "}
-              <Link to="/login" className="text-primary">
+              <Link to="/login" className="linkj-login">
                 Entrar
               </Link>
             </div>

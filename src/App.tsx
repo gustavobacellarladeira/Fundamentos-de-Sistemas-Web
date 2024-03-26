@@ -17,6 +17,8 @@ import { VaccineBookingScreen } from "./screens/app/VaccineBookingScreen/Vaccine
 import { TosaBookingScreen } from "./screens/app/TosaBookingScreen/TosaBookingScreen";
 import { AvaliationBookingScreen } from "./screens/app/AvaliationBookingScreen/AvaliationBookingScreen";
 import { Home } from "./screens/auth/Home/Dashboard";
+import Contact from "./screens/common/Contact/Contact";
+import AboutUs from "./screens/common/AboutUs/AboutUs";
 
 interface ThemeContextProps {
   setTheme: React.Dispatch<React.SetStateAction<string>>;
@@ -27,6 +29,7 @@ export const ThemeContext = React.createContext<ThemeContextProps | null>(null);
 
 function App() {
   const [theme, setTheme] = useState("light");
+
   const themeStyle = theme === "light" ? lightTheme : darkTheme;
 
   return (
@@ -38,7 +41,10 @@ function App() {
               <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
-                <Route path="/" element={<Home />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/about" element={<AboutUs />} />
+
+                <Route path="/home" element={<Home />} />
 
                 <Route
                   path="/"

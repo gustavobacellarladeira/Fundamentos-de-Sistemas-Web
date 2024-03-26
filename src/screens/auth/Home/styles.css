@@ -1,3 +1,4 @@
+/* Estilos para telas maiores que 768px (desktop) */
 .products-screen {
   display: flex;
   justify-content: center;
@@ -57,4 +58,24 @@
 
 .card-content h3 {
   margin-bottom: 10px;
+}
+
+/* Media query para telas menores que 768px (tablets e smartphones em modo paisagem) */
+@media (max-width: 768px) {
+  .product-layout {
+    flex-direction: column;
+  }
+
+  .dog-image {
+    order: 2; /* Move a imagem do cachorro para baixo */
+    margin-bottom: 20px;
+  }
+
+  .product-options {
+    order: 1; /* Move as opções de produto para cima */
+  }
+
+  .product-cards {
+    grid-template-columns: 1fr; /* Mostra os cards em uma única coluna */
+  }
 }

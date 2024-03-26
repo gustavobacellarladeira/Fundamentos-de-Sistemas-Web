@@ -1,52 +1,72 @@
-import React from "react";
+import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
-import "./styles.css";
 
-interface MyNavbarProps {}
-
-export const MyNavbar: React.FC<MyNavbarProps> = () => {
+export const MyNavbar = () => {
   const { authenticated, logout } = useAuth();
 
-  if (!authenticated) {
-    return (
-      <nav className="navbar">
-        <Link className="logo" to="/">
-          Pet Store
-        </Link>
-
-        <div className="nav-links">
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Cadastro</Link>
-        </div>
-      </nav>
-    );
-  }
-
   return (
-    <nav className="navbar">
-      <Link className="logo" to="/">
+    <Navbar
+      bg="dark"
+      variant="dark"
+      expand="lg"
+      collapseOnSelect
+      className="p-3"
+    >
+      <Navbar.Brand
+        as={Link}
+        to={authenticated ? "/" : "/home"}
+        className="fw-bold fs-4"
+        style={{
+          color: "#f44336",
+        }}
+      >
         Pet Store
-      </Link>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="me-auto">
+          {/* Adicione aqui os links para outras páginas */}
+        </Nav>
+        <Nav>
+          {!authenticated ? (
+            <>
+              <Nav.Link as={Link} to="/login">
+                Login
+              </Nav.Link>
+              <Nav.Link as={Link} to="/signup">
+                Cadastro
+              </Nav.Link>
+            </>
+          ) : (
+            <>
+              <NavDropdown title="Serviços" id="basic-nav-dropdown">
+                <NavDropdown.Item as={Link} to="/services/banho">
+                  Banhos
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/services/tosas">
+                  Tosas
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/services/avaliacao">
+                  Avaliações
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/services/vacinas">
+                  Vacinas
+                </NavDropdown.Item>
+              </NavDropdown>
 
-      <div className="nav-links">
-        <Link to="/pets">Cadastrar Pet</Link>
+              <Nav.Link as={Link} to="/services">
+                Escolha um serviço
+              </Nav.Link>
+              <Nav.Link as={Link} to="/pets">
+                Cadastrar Pet
+              </Nav.Link>
 
-        {/* <Link to="/meus-produtos">Produtos</Link> */}
-        <Link to="/services">Serviços</Link>
-
-        <Link to="/services/banho">Banhos</Link>
-
-        <Link to="/services/tosas">Tosas</Link>
-
-        <Link to="/services/avaliacao">Avaliações</Link>
-
-        <Link to="/services/vacinas">Vacinas</Link>
-
-        <div onClick={logout} className="button_logout">
-          Sair
-        </div>
-      </div>
-    </nav>
+              <Nav.Link onClick={logout}>Sair</Nav.Link>
+            </>
+          )}
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };

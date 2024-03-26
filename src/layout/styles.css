@@ -1,16 +1,9 @@
-.top-navbar-mobile-only {
-  display: none;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Pelo menos toda a altura da viewport */
 }
 
-.left-side-navbar-web-only {
-  display: block;
-}
-
-@media (max-width: 900px) {
-  .top-navbar-mobile-only {
-    display: block;
-  }
-  .left-side-navbar-web-only {
-    display: none;
-  }
+.content {
+  flex-grow: 1; /* Ocupa todo o espaço restante */
 }

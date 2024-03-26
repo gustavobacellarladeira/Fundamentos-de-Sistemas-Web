@@ -1,46 +1,21 @@
-/* Estilos para o NavBar */
-.navbar {
-  padding: 20px;
-  background-color: #333;
-  color: white;
-  height: 10vh;
-}
+/* Adicione estilos personalizados aqui */
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  padding: 20px;
-  color: #f44336;
-  text-decoration: none;
-
-  /* hover */
-  transition: color 0.3s;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100%;
-  margin-right: 20px;
-}
-
-.nav-links a {
-  margin-right: 20px;
-  color: white;
-  text-decoration: none;
-  padding: 20px;
-}
-
-.nav-links a:hover {
-  background-color: #555;
-}
-
-.button_logout {
-  background-color: #f44336;
-  color: white;
+.hamburger-icon {
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  background: none;
   cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-brand {
+    margin-right: auto;
+  }
 }

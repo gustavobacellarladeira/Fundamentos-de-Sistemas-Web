@@ -1,3 +1,4 @@
+/* Estilos para telas maiores que 768px (desktop) */
 .container {
   display: flex;
   justify-content: center;
@@ -6,10 +7,11 @@
 }
 
 .card {
-  width: 400px;
+  width: 400px; /* Largura inicial para telas maiores */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Centraliza o cartão horizontalmente */
 }
 
 .card-body {
@@ -64,4 +66,12 @@ button[type="submit"]:hover {
 
 .text-primary {
   color: #f44336; /* Cor do link */
+}
+
+/* Estilos para telas menores que 768px (tablets e smartphones) */
+@media (max-width: 768px) {
+  .card {
+    width: 90%; /* Largura ajustada para telas menores */
+    max-width: 300px; /* Largura máxima para evitar que o cartão se estenda demais */
+  }
 }

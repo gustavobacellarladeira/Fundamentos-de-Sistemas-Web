@@ -1,0 +1,42 @@
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  height: auto;
+}
+
+.contact-info {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.contact-info h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  margin-bottom: 10px;
+}
+
+.contact-info ul li a {
+  color: #007bff;
+}
+
+.contact-map {
+  flex: 1;
+}
+
+.contact-map img {
+  max-width: 100%;
+  height: auto;
+}

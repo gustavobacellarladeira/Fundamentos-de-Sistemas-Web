@@ -98,3 +98,43 @@ button:hover {
 .options span:hover {
   color: #f44336;
 }
+
+/* Estilo para telas menores que 768px (tablets e smartphones) */
+@media screen and (max-width: 768px) {
+  .vaccine-booking-screen {
+    flex-direction: column;
+  }
+
+  .form-container,
+  .vaccine-list {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  input,
+  select {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  .vaccine-list li {
+    flex-direction: column;
+  }
+
+  .options {
+    margin-top: 10px;
+    justify-content: flex-end;
+  }
+
+  .options span {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
